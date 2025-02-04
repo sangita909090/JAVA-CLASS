@@ -1,0 +1,11 @@
+class Animal {
+    public static void cat() {  // Static method
+        System.out.print("Meow Meow!!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal.cat(); 
+    }
+}
