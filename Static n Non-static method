@@ -1,0 +1,18 @@
+class Animal {
+    public static void dog(){  // Static method
+        System.out.println("BOW BOW....!!");
+    }
+}
+class Animal1{
+    public void cat(){
+        System.out.println("Meow Meow....!!");
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        Animal obj = new Animal();
+        obj.dog();
+        Animal1 obj1 = new Animal1();
+        obj1.cat();
+    }
+}
