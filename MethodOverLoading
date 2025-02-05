@@ -1,0 +1,15 @@
+//Method Overloading in JAVA:
+class MethodOverLoading{
+    public static void add(){ //normal method
+        System.out.println("Addition");
+    }
+    int add(int a , int b){ //parameterized method
+       return a+b;
+    }
+}
+class Main{
+    public static void main(String[] args){
+        MethodOverLoading obj = new  MethodOverLoading();
+        System.out.println("Addition is : "+obj.add(10,20));
+    }
+}
