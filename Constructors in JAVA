@@ -1,0 +1,17 @@
+//Constructors in JAVA
+class Fruits{
+    Fruits(){
+        System.out.println("I'm a fruit Constructor");
+    }
+   
+    Fruits(String name){
+        System.out.println("Fruit Name is : "+name);
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Fruits obj = new Fruits();
+        Fruits obj1 = new Fruits("Orange");
+    }
+}
