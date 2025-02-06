@@ -1,0 +1,40 @@
+import java.util.*;
+
+
+class Modi{
+    public int a=200;
+    protected int b=200;
+    int c=300;
+    private String name;
+    
+    public String getName(){
+        return name;
+    }
+    public void setName(String name){
+       this.name=name;
+    }
+}
+public class Modifiers{
+    public int a=100;
+    public int b=200;
+    int c=300;
+    private String name ="Sangita";
+    public static void main(String[]args){
+        Modifiers obj= new Modifiers();
+        System.out.println("A value is:"+obj.a);
+        System.out.println("A value is:"+obj.b);
+        System.out.println("A value is:"+obj.c);
+        System.out.println("My name is:"+obj.name);
+        
+    Modi m=new Modi();
+    System.out.println("A value is:"+m.a);
+    System.out.println("A value is:"+m.b);
+    System.out.println("A value is:"+m.c);
+    
+    m.setName("Sangita");
+    System.out.println("A value is:"+m.getName());
+    
+    
+    }
+}
+
