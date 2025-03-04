@@ -1,0 +1,23 @@
+class Employee {  // Parent class
+}
+
+class Employee1 extends Employee {  // Child class 1
+}
+
+class Employee2 extends Employee {  // Child class 2
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee emp = new Employee1();  // Creating an Employee1 object
+
+        if (emp instanceof Employee1) {
+            System.out.println("emp is an instance of Employee1");
+        } else if (emp instanceof Employee2) {
+            System.out.println("emp is an instance of Employee2");
+        } else {
+            System.out.println("emp is an instance of Employee");
+        }
+    }
+}
+
