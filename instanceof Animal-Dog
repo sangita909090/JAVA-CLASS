@@ -1,0 +1,17 @@
+class Animal { // Parent class
+}
+
+class Dog extends Animal { // Child class
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animalObj = new Animal(); // Animal object
+        Dog dogObj = new Dog();         // Dog object
+
+        // Using instanceof to check the object type
+        System.out.println(animalObj instanceof Animal); // Output: true
+        System.out.println(dogObj instanceof Dog);       // Output: true
+        System.out.println(dogObj instanceof Animal);    // Output: true (because Dog extends Animal)
+    }
+}
