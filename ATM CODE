@@ -1,0 +1,92 @@
+package sample;
+import java.util.Scanner;
+
+abstract class ATM {    
+    double balance;
+
+    ATM(double balance) {      
+        this.balance = balance;
+    }
+
+    abstract void withDraw(double amount);
+    abstract void deposit(double amount);
+    abstract void checkBal();
+}
+
+class SBI extends ATM {   
+
+    // Constructor
+    SBI(double balance) {
+        super(balance);
+    }
+
+    // Withdraw method
+    void withDraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            System.out.println("Withdrawal successful. Available balance: " + balance);
+        } else {
+            System.out.println("Insufficient balance.");
+        }
+    }
+
+    // Deposit method
+    void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Deposit successful. Available balance: " + balance);
+        } else {
+            System.out.println("Invalid deposit amount.");
+        }
+    }
+
+    // Check balance
+    void checkBal() {
+        System.out.println("Current balance: " + balance);
+    }
+}
+
+public class ATM_Abstraction {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        SBI obj = new SBI(1000);  // Initial amount
+
+        while (true) {
+            System.out.println("---------ATM MENU-------");
+            System.out.println("1. Withdraw Money");
+            System.out.println("2. Deposit Money");
+            System.out.println("3. Check Balance");
+            System.out.println("4. Exit");
+            System.out.println("----------------------");
+
+            System.out.print("Enter Your Choice: ");
+            int choice = s.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter amount to withdraw: ");
+                    double with_amount = s.nextDouble();
+                    obj.withDraw(with_amount);
+                    break;
+
+                case 2:
+                    System.out.print("Enter amount to deposit: ");
+                    double depo_amount = s.nextDouble();
+                    obj.deposit(depo_amount);
+                    break;
+
+                case 3:
+                    obj.checkBal();
+                    break;
+
+                case 4:
+                    System.out.println("Thank you! Visit again.");
+                    s.close();
+                    return;
+
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
+        }
+    }
+}
