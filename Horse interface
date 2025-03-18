@@ -1,0 +1,18 @@
+package sample;
+
+interface Animal {
+    void sound();
+}
+
+class Horse implements Animal {
+    public void sound() {
+        System.out.println("Woof Woof");
+    }
+}
+
+public class Main { 
+    public static void main(String[] args) {
+        Horse h = new Horse();
+        h.sound(); 
+    }
+}
