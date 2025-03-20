@@ -1,0 +1,27 @@
+//Composition Car_Moves
+class Engine {  
+    void start() {
+        System.out.println("Engine is starting...");
+    }
+    void stop() {
+        System.out.println("Engine is stopping...");
+    }
+}
+class Car { 
+    Engine engine = new Engine(); 
+    void move() {
+        engine.start(); // Start the engine before moving
+        System.out.println("Car is moving...");
+    }
+    void stop() {
+        System.out.println("Car is stopping...");
+        engine.stop(); 
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Car();
+        car.move(); 
+        car.stop();
+    }
+}
