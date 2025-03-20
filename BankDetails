@@ -1,0 +1,28 @@
+//Composition
+class Bank {  
+    String bankName = "HDFC BANK";
+    String ifscCode = "HDFC0005678";
+}
+
+class Account {  
+    String accNumber = "1234567890";
+    String accName = "Sonia Sikhwat";
+    String accPhone = "9876543210";
+    
+    Bank bank = new Bank(); // Composition (Account HAS-A Bank)
+    
+    void displayDetails() {
+        System.out.println("BANK NAME      : " + bank.bankName);
+        System.out.println("IFSC CODE      : " + bank.ifscCode);
+        System.out.println("ACCOUNT NUMBER : " + accNumber);
+        System.out.println("ACCOUNT NAME   : " + accName);
+        System.out.println("ACCOUNT PHONE  : " + accPhone);
+    }
+}
+
+public class Composition {
+    public static void main(String[] args) {
+        Account acc = new Account();
+        acc.displayDetails();
+    }
+}
