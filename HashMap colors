@@ -1,0 +1,35 @@
+package sample;
+
+import java.util.Map;
+
+import java.util.HashMap;
+
+public class MapS {
+
+        public static void main(String[] args) {
+
+        Map<String, Integer> colors = new HashMap<>();
+
+        System.out.println("My Empty Map: " + colors);
+
+        colors.put("Red", 1);
+
+        colors.put("Yellow", 2);
+
+        colors.put("Blue", 3);
+
+        colors.put("Black", 4);
+
+        colors.put("white", 5);
+
+        colors.put("green", 6);
+
+        System.out.println("My Map after adding: " + colors);
+
+        colors.remove("Red");
+
+        System.out.println("My Map after removing Red: " + colors);
+
+    }
+
+}
