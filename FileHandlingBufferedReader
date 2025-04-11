@@ -1,0 +1,21 @@
+package sample;
+
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.IOException;
+
+public class File_Open {
+    public static void main(String[] args) {
+        try {
+            BufferedReader read_java = new BufferedReader(new FileReader("Java.txt"));
+            String temp;
+            while ((temp = read_java.readLine()) != null) {
+                System.out.println(temp); // print the actual content, not the string "temp"
+            }
+            read_java.close();
+        } catch (IOException e) {
+            System.out.println("File is not Found or Could Not be Opened");
+            e.printStackTrace();
+        }
+    }
+}
