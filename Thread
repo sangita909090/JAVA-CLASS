@@ -1,0 +1,24 @@
+package Package_sample;
+class MyThread extends Thread{
+	public void start() {
+		System.out.println("Thread is starting............");
+		for(int i=0;i<5;i++) {
+			System.out.println("Thread is starting............");
+			try {
+				Thread.sleep(5000);
+			}
+			catch(InterruptedException e) {
+				System.out.println("Thread is not starting.........."+e);
+			}
+		}
+	}
+}
+public class Threads {
+
+	public static void main(String[] args) {
+		MyThread m1= new MyThread();
+		m1.start();
+
+	}
+
+}
